@@ -33,8 +33,10 @@ def get_public_ip():
 
 
 def save_public_ip(public_ip):
+    dt = datetime.now(US_EST_TIMEZONE).strftime("%Y-%m-%d %H:%M:%S")
+    print(f'Saved {public_ip} at {dt}.')
     with open(SAVE_FILE_NAME, mode='a+', encoding='utf-8') as f:
-        f.write(f'{datetime.now(US_EST_TIMEZONE).strftime("%Y-%m-%d %H:%M:%S")},{public_ip}\n')
+        f.write(f'{dt},{public_ip}\n')
 
 
 def main():
