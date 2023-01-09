@@ -13,7 +13,7 @@ from pytz import timezone
 
 SAVE_FILE_NAME = 'ip_monitoring.csv'
 
-US_EST_TIMEZONE = timezone('EST')   
+US_EST_TIMEZONE = timezone('EST')
 
 PUBLIC_IP_ENDPOINT = 'https://api.ipify.org'
 
